@@ -10,7 +10,9 @@ public class Playlist implements IComponent {
 	}
 
   public void play(){
-		System.out.println("play the playlist " + this.playlistName);
+		for(IComponent song: this.playlist){
+			song.play();
+		}
   }
 
   public void setPlaybackSpeed(float speed){
