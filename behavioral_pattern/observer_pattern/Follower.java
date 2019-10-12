@@ -1,12 +1,23 @@
 public class Follower implements Observer {
   private String followerName;
-  private String status;
+
+  public Follower(String followerName){
+    this.followerName = followerName;
+  }
+
+  public String getFollowerName(){
+    return this.followerName;
+  }
+
+  public void setFollowerName(String followerName){
+    this.followerName = followerName;
+  }
 
   public void update(String status){
-    this.status = status;
+    // send message to followers that the Channel is live.
   }
 
   public void play(){
-    System.out.print("play ");
+    // play channel
   }
 }
