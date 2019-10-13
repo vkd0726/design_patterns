@@ -54,6 +54,10 @@ public class ContactListController extends Observable {
         return contact_list.getUserByUsername(username);
     }
 
+    public Contact getContactByUsername(String username){
+        return contact_list.getContactByUsername(username);
+    }
+
     public boolean hasContact(Contact contact) {
         return contact_list.hasContact(contact);
     }
@@ -72,9 +76,5 @@ public class ContactListController extends Observable {
 
     public boolean saveContacts(Context context) {
         return contact_list.saveContacts(context);
-    }
-
-    public Contact getContactByUsername(String username){
-        return contact_list.getContactByUsername(username);
     }
 }
