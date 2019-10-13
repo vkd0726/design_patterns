@@ -11,31 +11,31 @@ public class ContactController {
         this.contact = contact;
     }
 
-    public String getContactId(){
+    public String getId(){
         return contact.getId();
     }
 
-    public void setContactId(){
+    public void setId(){
         contact.setId();
     }
 
-    public void updateContactId(String id){
+    public void updateId(String id){
         contact.updateId(id);
     }
 
-    public String getContactusername(){
+    public String getUsername(){
         return contact.getUsername();
     }
 
-    public void setContactUsername(String username){
+    public void setUsername(String username){
         contact.setUsername(username);
     }
 
-    public String getContactEmail(){
+    public String getEmail(){
         return contact.getEmail();
     }
 
-    public void setContactEmail(String email){
+    public void setEmail(String email){
         contact.setEmail(email);
     }
 
