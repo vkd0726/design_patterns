@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * ItemList class
  */
-public class ItemList extends Observable {
+public class ItemList {
 
     private static ArrayList<Item> items;
     private String FILENAME = "items.sav";
@@ -28,7 +28,6 @@ public class ItemList extends Observable {
 
     public void setItems(ArrayList<Item> item_list) {
         items = item_list;
-        notifyObservers();
     }
 
     public ArrayList<Item> getItems() {
@@ -37,12 +36,10 @@ public class ItemList extends Observable {
 
     public void addItem(Item item) {
         items.add(item);
-        notifyObservers();
     }
 
     public void deleteItem(Item item) {
         items.remove(item);
-        notifyObservers();
     }
 
     public Item getItem(int index) {
@@ -79,7 +76,6 @@ public class ItemList extends Observable {
         } catch (IOException e) {
             items = new ArrayList<Item>();
         }
-        notifyObservers();
     }
 
     public boolean saveItems(Context context) {

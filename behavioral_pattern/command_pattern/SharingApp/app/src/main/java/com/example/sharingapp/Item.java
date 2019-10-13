@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * Item class
  */
-public class Item extends Observable{
+public class Item{
 
     private String title;
     private String maker;
@@ -45,17 +45,14 @@ public class Item extends Observable{
 
     public void setId() {
         this.id = UUID.randomUUID().toString();
-        notifyObservers();
     }
 
     public void updateId(String id){
         this.id = id;
-        notifyObservers();
     }
 
     public void setTitle(String title) {
         this.title = title;
-        notifyObservers();
     }
 
     public String getTitle() {
@@ -64,7 +61,6 @@ public class Item extends Observable{
 
     public void setMaker(String maker) {
         this.maker = maker;
-        notifyObservers();
     }
 
     public String getMaker() {
@@ -73,7 +69,6 @@ public class Item extends Observable{
 
     public void setDescription(String description) {
         this.description = description;
-        notifyObservers();
     }
 
     public String getDescription() {
@@ -82,7 +77,6 @@ public class Item extends Observable{
 
     public void setDimensions(String length, String width, String height) {
         this.dimensions = new Dimensions(length, width, height);
-        notifyObservers();
     }
 
     public String getLength(){
@@ -99,7 +93,6 @@ public class Item extends Observable{
 
     public void setStatus(String status) {
         this.status = status;
-        notifyObservers();
     }
 
     public String getStatus() {
@@ -108,7 +101,6 @@ public class Item extends Observable{
 
     public void setBorrower(Contact borrower) {
         this.borrower = borrower;
-        notifyObservers();
     }
 
     public Contact getBorrower() {
@@ -124,7 +116,6 @@ public class Item extends Observable{
             byte[] b = byteArrayBitmapStream.toByteArray();
             image_base64 = Base64.encodeToString(b, Base64.DEFAULT);
         }
-        notifyObservers();
     }
 
     public Bitmap getImage(){
