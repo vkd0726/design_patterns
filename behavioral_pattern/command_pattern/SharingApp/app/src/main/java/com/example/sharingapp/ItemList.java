@@ -96,7 +96,6 @@ public class ItemList {
         return true;
     }
 
-
     public ArrayList<Contact> getActiveBorrowers() {
 
         ArrayList<Contact> active_borrowers = new ArrayList<Contact>();

@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * Item class
  */
-public class Item{
+public class Item {
 
     private String title;
     private String maker;
@@ -126,3 +126,4 @@ public class Item{
         return image;
     }
 }
+

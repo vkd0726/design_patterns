@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * Item class
  */
-public class Item extends Observable{
+public class Item extends Observable {
 
     private String title;
     private String maker;
@@ -22,8 +22,7 @@ public class Item extends Observable{
     protected String image_base64;
     private String id;
 
-    public Item(String title, String maker, String description, Bitmap image,
-                String id ) {
+    public Item(String title, String maker, String description, Bitmap image, String id) {
         this.title = title;
         this.maker = maker;
         this.description = description;
@@ -131,6 +130,7 @@ public class Item extends Observable{
         if (image == null && image_base64 != null) {
             byte[] decodeString = Base64.decode(image_base64, Base64.DEFAULT);
             image = BitmapFactory.decodeByteArray(decodeString, 0, decodeString.length);
+            notifyObservers();
         }
         return image;
     }

@@ -1,12 +1,10 @@
 package com.example.sharingapp;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 
 /**
- * ItemController is responsible for all communication between views and item object
+ * ItemController is responsible for all communication between views and Item object
  */
-
 public class ItemController {
 
     private Item item;
@@ -19,39 +17,39 @@ public class ItemController {
         return item.getId();
     }
 
-    public void setId(){
+    public void setId() {
         item.setId();
     }
 
-    public void setTitle(String title){
+    public void setTitle(String title) {
         item.setTitle(title);
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return item.getTitle();
     }
 
-    public void setMaker(String maker){
+    public void setMaker(String maker) {
         item.setMaker(maker);
     }
 
-    public String getMaker(){
+    public String getMaker() {
         return item.getMaker();
     }
 
-    public void setDescription(String description){
+    public void setDescription(String description) {
         item.setDescription(description);
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return item.getDescription();
     }
 
-    public void setDimesions(String length, String width, String height){
+    public void setDimensions(String length, String width, String height) {
         item.setDimensions(length, width, height);
     }
 
-    public String getLength(){
+    public String getLength() {
         return item.getLength();
     }
 
@@ -63,19 +61,19 @@ public class ItemController {
         return item.getHeight();
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status) {
         item.setStatus(status);
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return item.getStatus();
     }
 
-    public void setBorrower(Contact borrower){
+    public void setBorrower(Contact borrower) {
         item.setBorrower(borrower);
     }
 
-    public Contact getBorrower(){
+    public Contact getBorrower() {
         return item.getBorrower();
     }
 
@@ -87,15 +85,13 @@ public class ItemController {
         return item.getImage();
     }
 
-    public Item getItem(){
-        return this.item;
-    }
+    public Item getItem() { return this.item; }
 
-    public void addObserver(Observer observer){
+    public void addObserver(Observer observer) {
         item.addObserver(observer);
     }
 
-    public void removeObserver(Observer observer){
+    public void removeObserver(Observer observer) {
         item.removeObserver(observer);
     }
 }

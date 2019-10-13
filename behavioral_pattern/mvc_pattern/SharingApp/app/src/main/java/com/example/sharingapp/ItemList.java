@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * ItemList class
  */
-public class ItemList extends Observable {
+public class ItemList extends Observable{
 
     private static ArrayList<Item> items;
     private String FILENAME = "items.sav";
@@ -99,7 +99,6 @@ public class ItemList extends Observable {
         }
         return true;
     }
-
 
     public ArrayList<Contact> getActiveBorrowers() {
 

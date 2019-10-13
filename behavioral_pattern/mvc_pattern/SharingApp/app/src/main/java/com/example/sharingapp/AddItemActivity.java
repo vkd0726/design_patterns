@@ -34,6 +34,7 @@ public class AddItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_add_item);
 
         title = (EditText) findViewById(R.id.title);
@@ -90,12 +91,12 @@ public class AddItemActivity extends AppCompatActivity {
         }
 
         Item item = new Item(title_str, maker_str, description_str, image, null);
-        ItemController item_controller= new  ItemController(item);
-        item_controller.setDimesions(length_str, width_str, height_str);
+        ItemController item_controller = new ItemController(item);
+        item_controller.setDimensions(length_str, width_str, height_str);
 
         // Add item
         boolean success = item_list_controller.addItem(item, context);
-        if (!success){
+        if (!success) {
             return;
         }
 

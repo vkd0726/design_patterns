@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Displays a list of all contacts
+ * Note: You will not be able to edit/delete contacts which are "active" borrowers
  */
 public class ContactsActivity extends AppCompatActivity {
 
@@ -58,7 +59,7 @@ public class ContactsActivity extends AppCompatActivity {
                     }
                 }
 
-                contact_list.loadContacts(context); // Must load contacts again here
+                contact_list.loadContacts(context); // must load contacts again here
                 int meta_pos = contact_list.getIndex(contact);
 
                 Intent intent = new Intent(context, EditContactActivity.class);

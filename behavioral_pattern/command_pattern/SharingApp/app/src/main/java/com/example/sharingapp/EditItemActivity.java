@@ -70,7 +70,7 @@ public class EditItemActivity extends AppCompatActivity{
                 android.R.layout.simple_spinner_dropdown_item, contact_list.getAllUsernames());
         borrower_spinner.setAdapter(adapter);
 
-        Intent intent = getIntent();   // Get intent from ItemsFragment
+        Intent intent = getIntent(); // Get intent from ItemsFragment
         int pos = intent.getIntExtra("position", 0);
 
         item = item_list.getItem(pos);
@@ -84,6 +84,7 @@ public class EditItemActivity extends AppCompatActivity{
         title.setText(item.getTitle());
         maker.setText(item.getMaker());
         description.setText(item.getDescription());
+
         length.setText(item.getLength());
         width.setText(item.getWidth());
         height.setText(item.getHeight());
@@ -153,7 +154,7 @@ public class EditItemActivity extends AppCompatActivity{
         Contact contact = null;
         if (!status.isChecked()) {
             String borrower_str = borrower_spinner.getSelectedItem().toString();
-            contact = contact_list.getContactByUsername(borrower_str);
+            contact = contact_list.getUserByUsername(borrower_str);
         }
 
         if (title_str.equals("")) {
@@ -186,7 +187,7 @@ public class EditItemActivity extends AppCompatActivity{
             return;
         }
 
-        String id = item.getId(); // Reuse the item id
+        String id = item.getId();  // Reuse the item id
         Item updated_item = new Item(title_str, maker_str, description_str, image, id );
         updated_item.setDimensions(length_str, width_str, height_str);
 
@@ -216,7 +217,7 @@ public class EditItemActivity extends AppCompatActivity{
      */
     public void toggleSwitch(View view){
         if (status.isChecked()) {
-            // Means was previously borrowed, switch was toggled to available
+            // Means was previously borrowed, switch has been toggled to available
             borrower_spinner.setVisibility(View.GONE);
             borrower_tv.setVisibility(View.GONE);
             item.setBorrower(null);

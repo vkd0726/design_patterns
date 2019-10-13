@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Item Adapter is responsible for what information is displayed in ListView entries.
+ * ItemAdapter is responsible for what information is displayed in ListView entries.
  */
 public class ItemAdapter extends ArrayAdapter<Item> {
 
@@ -33,8 +33,6 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
         // getItem(position) gets the "item" at "position" in the "items" ArrayList
         // (where "items" is a parameter in the ItemAdapter creator as seen above ^^)
-        // Note: getItem() is not a user-defined method in the Item/ItemList class!
-        // The "Item" in the method name is a coincidence...
         Item item = getItem(position);
 
         String title = "Title: " + item.getTitle();

@@ -7,19 +7,19 @@ import java.util.ArrayList;
 /**
  * ItemListController is responsible for all communication between views and ItemList object
  */
-
 public class ItemListController {
+
     private ItemList item_list;
 
     public ItemListController(ItemList item_list){
         this.item_list = item_list;
     }
 
-    public void setItems(ArrayList<Item> item_list){
+    public void setItems(ArrayList<Item> item_list) {
         this.item_list.setItems(item_list);
     }
 
-    public ArrayList<Item> getItems(){
+    public ArrayList<Item> getItems() {
         return item_list.getItems();
     }
 
@@ -29,7 +29,7 @@ public class ItemListController {
         return add_item_command.isExecuted();
     }
 
-    public boolean deleteItem(Item item, Context context){
+    public boolean deleteItem(Item item, Context context) {
         DeleteItemCommand delete_item_command = new DeleteItemCommand(item_list, item, context);
         delete_item_command.execute();
         return delete_item_command.isExecuted();
@@ -41,23 +41,23 @@ public class ItemListController {
         return edit_item_command.isExecuted();
     }
 
-    public Item getItem(int index){
+    public Item getItem(int index) {
         return item_list.getItem(index);
     }
 
-    public int getIndex(Item item){
+    public int getIndex(Item item) {
         return item_list.getIndex(item);
     }
 
-    public int getSize(){
+    public int getSize() {
         return item_list.getSize();
     }
 
-    public void loadItems(Context context){
+    public void loadItems(Context context) {
         item_list.loadItems(context);
     }
 
-    public ArrayList<Contact> getActiveBorrowers(){
+    public ArrayList<Contact> getActiveBorrowers() {
         return item_list.getActiveBorrowers();
     }
 
@@ -65,11 +65,11 @@ public class ItemListController {
         return item_list.filterItemsByStatus(status);
     }
 
-    public void addObserver(Observer observer){
+    public void addObserver(Observer observer) {
         item_list.addObserver(observer);
     }
 
-    public void removeObserver(Observer observer){
+    public void removeObserver(Observer observer) {
         item_list.removeObserver(observer);
     }
 }

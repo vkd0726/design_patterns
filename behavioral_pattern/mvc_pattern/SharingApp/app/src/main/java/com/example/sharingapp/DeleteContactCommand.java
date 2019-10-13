@@ -3,9 +3,10 @@ package com.example.sharingapp;
 import android.content.Context;
 
 /**
- * Command to delete an item
+ * Command to delete a contact
  */
 public class DeleteContactCommand extends Command {
+
     private ContactList contact_list;
     private Contact contact;
     private Context context;
